@@ -1,20 +1,15 @@
-import config from 'config';
 import http from 'http';
 import app from './src/app';
-
-const PORT = config.get('port');
-if (!PORT) {
-  console.log('PORT is not available in config');
-}
+import { PORT } from './src/config';
 
 const server = http.createServer(app);
 
 function onListening() {
-  console.info(`Server started listening on port ${PORT}`);
+  console.log(`Server started listening on port ${PORT}`);
 }
 
 function onError(err: any) {
-  console.info(err);
+  console.log(err);
 }
 
 server.on('listening', onListening);
