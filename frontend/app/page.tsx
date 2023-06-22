@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center my-6 mx-5">
+    <div className="flex flex-col items-center">
       <h1 className="text-2xl text-center mb-8">Choose approach by clicking</h1>
       <div className="flex flex-col items-center gap-7">
         <Link href="/user-key">
